@@ -10,6 +10,8 @@ import Todos from "./Components/Todos";
 
 const App = () => {
   const [todos, dispatch] = useReducer(todoReducer, []);
+  //The reducer is a pure function that takes the previous state and an action, and returns the next state.
+  //It's called a reducer because it's the type of function you would pass to Array. prototype.
   return (
     <TodoContext.Provider value={{ todos, dispatch }}>
       <Container fluid>
